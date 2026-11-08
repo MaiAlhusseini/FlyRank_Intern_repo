@@ -101,7 +101,3 @@ Before submitting your repository URL on the portal, double-check your report te
 
 6. **Single-Line Submission Marker:**
    * Ensure `submission/paper_url.txt` exists at the root of your repo and contains **only 1 line** (your live GitHub Pages link or direct raw link to `work/capstone_report.md`).
-
----
-
-🎓 *Once these sections are updated in `work/capstone_report.md` and your repo is pushed, you are 100% ready to submit your capstone on the portal!*
