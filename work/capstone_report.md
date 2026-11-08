@@ -64,3 +64,44 @@ Can machine learning prioritize existing search URLs for content refresh and sni
   - `POOR_PAGE_RETENTION`: Good visibility but low engagement rate $\rightarrow$ *UX &amp; Internal Link Restructure*.
 - **Human Review Guardrails:** YMYL (financial/medical) and core pricing pages require mandatory editorial review before changes are published.
 - **Retrain Triggers:** Major search engine core updates or significant site-wide CTR benchmark shifts over a 90-day window.
+---
+## 8. Reproducibility
+- **Fresh Clone Commands:**
+  ```bash
+  git clone [https://github.com/MaiAlhusseini/FlyRank_Intern_repo]
+  cd FlyRank_Intern_repo
+  pip install -r requirements.txt
+  python -m jupyter nbconvert --execute Copy_of_capstone.ipynb
+---
+
+### 2. Pre-Submission Claims &amp; Metrics Checklist
+
+Before submitting your repository URL on the portal, double-check your report text against these 6 mandatory rubric rules:
+
+1. **Language Safety Audit:**
+   * ✅ **DO use:** *"observed," "measured," "directional," "decision-support prioritization."*
+   * ❌ **DO NOT use:** *"guarantees ranking recovery," "proved causality," "decoded Google's algorithm."*
+
+2. **Base-Rate Reporting (Honest Metrics):**
+   * Check your target label base rate in `capstone.ipynb`:
+     ```python
+     base_rate = df_capstone['is_declining_label'].mean()
+     print(f"Dataset Base Rate (Majority/Positive Class): {base_rate:.2%}")
+     ```
+   * Explicitly state this in **Section 5**: *"The task base rate for declining URLs is **X%**. The model achieved a Precision@50 of **Y%**, representing a **Z-fold Lift** over both the base rate and the heuristic baseline."*
+
+3. **No Client Privacy / Leakage:**
+   * Verify that no raw client names, private URLs, or unmasked credentials exist in your committed files or notebooks.
+
+4. **Sealed Evaluation Artifacts Committed:**
+   * Ensure `w06_model_predictions.csv` (or your evaluation frame) and `capstone_metrics_summary.json` are committed to GitHub so reviewers can verify your numbers without re-running.
+
+5. **Matching Numbers:**
+   * Double-check that the numbers reported in `work/capstone_report.md` match the exact numbers generated when running `Copy_of_capstone.ipynb`.
+
+6. **Single-Line Submission Marker:**
+   * Ensure `submission/paper_url.txt` exists at the root of your repo and contains **only 1 line** (your live GitHub Pages link or direct raw link to `work/capstone_report.md`).
+
+---
+
+🎓 *Once these sections are updated in `work/capstone_report.md` and your repo is pushed, you are 100% ready to submit your capstone on the portal!*
